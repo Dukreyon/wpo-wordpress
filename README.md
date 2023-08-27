@@ -117,7 +117,7 @@ Wordpress viene por defecto con temas, plugins y widgets que no se utilizan.
 
 ### 1.4 Optimizar la base de datos de WordPress
 
-Para optimizar la base de datos podmeos utilizar el plugin [WP-Sweep] (https://wordpress.org/plugins/wp-sweep/)
+Para optimizar la base de datos podmeos utilizar el plugin [WP-Sweep](https://wordpress.org/plugins/wp-sweep/)
 
 - 1.4.1 Elimina las revisiones, borradores automáticos y entradas descartadas
   
@@ -138,6 +138,7 @@ Para optimizar la base de datos podmeos utilizar el plugin [WP-Sweep] (https://w
 - 1.4.9 Activa la limpieza automática 
 
 - 1.4.10 Optimizar la base de datos de WordPress desde PHPMyadmin
+  
   PhpMyAdmin nos permite optimizar las tablas desde el menú desplegable principal. Lo que podemos hacer para optimizar la base de datos de WordPress es hacer click en la casilla “Seleccionar todo” y  seleccionar “Optimizar la tabla” en el menú desplegable. PhpMyAdmin lo hará todo automáticamente.
 
 
