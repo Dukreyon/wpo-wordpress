@@ -101,6 +101,18 @@ define( ‘WP_POST_REVISIONS’, false );
 </IfModule>
 
 ```
+### 1.3 Borrar contenido por defecto de WordPress
 
+Wordpress viene por defecto con temas, plugins y widgets que no se utilizan. 
+
+- Eliminar plugins que no usarás:
+
+   -- Hello Dolly
+
+- Borrar themes de WordPress que no utilizas:
+
+   -- Borrar los temas que no tengas activos
+
+- Borrar post de WordPress: Hellow World
 
 
