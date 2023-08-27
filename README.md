@@ -115,4 +115,29 @@ Wordpress viene por defecto con temas, plugins y widgets que no se utilizan.
 
 - Borrar post de WordPress: Hellow World
 
+### 1.4 Optimizar la base de datos de WordPress
+
+Para optimizar la base de datos podmeos utilizar el plugin [WP-Sweep] (https://wordpress.org/plugins/wp-sweep/)
+
+- 1.4.1 Elimina las revisiones, borradores automáticos y entradas descartadas
+  
+- 1.4.2 Elimina comentarios spam y descartados 
+
+- 1.4.3 Elimina transients o datos transitorios 
+
+- 1.4.4 Desactiva y elimina Pingbacks y Trackbacks 
+
+- 1.4.5 Limpia la base de datos de WordPress 
+
+- 1.4.6 Utiliza Memcached en WordPress
+
+- 1.4.7 Elimina queries lentas de la base de datos de WordPress 
+
+- 1.4.8 Optimiza las tablas de la base de datos 
+
+- 1.4.9 Activa la limpieza automática 
+
+- 1.4.10 Optimizar la base de datos de WordPress desde PHPMyadmin
+  PhpMyAdmin nos permite optimizar las tablas desde el menú desplegable principal. Lo que podemos hacer para optimizar la base de datos de WordPress es hacer click en la casilla “Seleccionar todo” y  seleccionar “Optimizar la tabla” en el menú desplegable. PhpMyAdmin lo hará todo automáticamente.
+
 
