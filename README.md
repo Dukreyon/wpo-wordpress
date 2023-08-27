@@ -141,4 +141,23 @@ Para optimizar la base de datos podmeos utilizar el plugin [WP-Sweep](https://wo
   
   PhpMyAdmin nos permite optimizar las tablas desde el menú desplegable principal. Lo que podemos hacer para optimizar la base de datos de WordPress es hacer click en la casilla “Seleccionar todo” y  seleccionar “Optimizar la tabla” en el menú desplegable. PhpMyAdmin lo hará todo automáticamente.
 
+### Arreglar contenido Mixto en WordPress
+
+Esto suele ser debido a 2 motivos:
+
+1) Has instalado un certificado SSL válido pero tu web aún es accesible sin HTTPS porque no has realizado la redirección de HTTP a HTTPS.
+2) Has instalado un certificado SSL válido, has hecho la redirección, pero tu web sirve contenido mixto, bajo HTTP.
+
+   Para solucionarlo podemos utilizar el plugin [Really Simple SSL](https://es.wordpress.org/plugins/really-simple-ssl/). Simplemente activa el plugin y pulsa el botón para activar el SSL.
+
+   También podemos realizarlo mediante el archivo .htaccess con estas instrucciones
+
+   ```
+     define('FORCE_SSL_LOGIN', true);
+     define('FORCE_SSL_ADMIN', true);
+   
+   ```
+   
+   
+
 
