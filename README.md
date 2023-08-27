@@ -141,7 +141,7 @@ Para optimizar la base de datos podmeos utilizar el plugin [WP-Sweep](https://wo
   
   PhpMyAdmin nos permite optimizar las tablas desde el menú desplegable principal. Lo que podemos hacer para optimizar la base de datos de WordPress es hacer click en la casilla “Seleccionar todo” y  seleccionar “Optimizar la tabla” en el menú desplegable. PhpMyAdmin lo hará todo automáticamente.
 
-### Arreglar contenido Mixto en WordPress
+### 1.5 Arreglar contenido Mixto en WordPress
 
 Esto suele ser debido a 2 motivos:
 
