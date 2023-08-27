@@ -1,2 +1,83 @@
 # wpo-wordpress
 Guia WPO Wordpress
+
+Guia de recursos para optimizar la velocidad de carga de WordPress
+
+## 1 Optimizar Configuración Wordpress
+
+### 1.1 Modificar el wp-config.php 
+- Revisiones de Posts: Para limitar el número de revisiones que WP guarda a tres por entrada, introduzca la siguiente línea en wp-config.php:
+  
+```
+define( ‘WP_POST_REVISIONS’, 3 );
+
+```
+
+Si prefiere no almacenar ninguna revisión, puede utilizar la siguiente línea:
+
+```
+define( ‘WP_POST_REVISIONS’, false );
+```
+
+- Intervalo de autoguardado de WP: Si quieres que WordPress guarde automáticamente tu trabajo cada 180 segundos, necesitas la siguiente línea en el archivo wp-config.php:
+  
+```
+  define(‘AUTOSAVE_INTERVAL’, 180 );
+```
+
+- Definición de la URL de inicio y del sitio: cada vez que un plugin o un tema necesita acceder a ellos, envía una consulta SQL. Esto ocurre más a menudo de lo que crees, y procesar todas estas consultas puede acabar consumiendo una cantidad significativa de recursos de hardware. Definir las URL de inicio y del sitio en el archivo wp-config.php reducirá la carga de la base de datos y mejorará el rendimiento. Esto es lo que tienes que añadir:
+
+```
+  define(‘WP_HOME’, ‘http://www.yourdomain.com’); 
+  define(‘WP_SITEURL’, ‘http://www.yourdomain.com’);
+```
+
+- Vaciar la papelera WP con más frecuencia
+```
+  define(‘EMPTY_TRASH_DAYS’, 7 );
+```
+
+- Compresión archivos:
+
+  ```
+  define( 'COMPRESS_CSS',        true );
+  define( 'COMPRESS_SCRIPTS',    true );
+  define( 'CONCATENATE_SCRIPTS', true );
+  define( 'ENFORCE_GZIP',        true );
+
+  ```
+
+### 1.2 Modificar el .htaccess
+
+- Activar la compresión GZIP / DEFLATE
+
+```
+    <ifModule mod_gzip.c>
+      mod_gzip_on Yes
+      mod_gzip_dechunk Yes
+      mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+      mod_gzip_item_include handler ^cgi-script$
+      mod_gzip_item_include mime ^text/.*
+      mod_gzip_item_include mime ^application/x-javascript.*
+      mod_gzip_item_exclude mime ^image/.*
+      mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+    </ifModule>
+```
+
+- Activar Keep Alive en Apache: El parámetro Keep Alive permite que la conexión entre el servidor y el navegador del visitante no se cierre. Como resultado, si hay que realizar varias peticiones consecutivas, al mantener la conexión abierta se realizarán mucho más rápidamente. Es lo que comúnmente se llama “conexión persistente”.
+
+ 
+```
+  #Activar Keep Alive
+  KeepAlive On
+ 
+  #Conexiones maximas persistentes por Keep Alive
+  MaxKeepAliveRequests 100
+ 
+  #Keep Alive Timeout de cada conexion
+  KeepAliveTimeout 100
+
+```
+
+
+
