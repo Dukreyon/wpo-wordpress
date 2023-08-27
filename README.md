@@ -47,7 +47,9 @@ define( ‘WP_POST_REVISIONS’, false );
 
   ```
 
-### 1.2 Modificar el .htaccess
+### 1.2 Modificar el .htaccess 
+
+(Fuente https://alvarofontela.com/htaccess-para-wordpress-tips-trucos/)
 
 - Activar la compresión GZIP / DEFLATE
 
@@ -76,6 +78,27 @@ define( ‘WP_POST_REVISIONS’, false );
  
   #Keep Alive Timeout de cada conexion
   KeepAliveTimeout 100
+
+```
+- Activar cache de navegador o browser cache: El browser cache nos permite ahorrar recursos en el servidor web y también ancho de banda en el hosting o servidor.
+  
+```
+ <IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
 
 ```
 
