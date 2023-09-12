@@ -162,13 +162,13 @@ Esto suele ser debido a 2 motivos:
 
 Los sistemas de cache de página normalmente cachean cada cierto tiempo la página y muestran una página estática. El problema viene si tenemos muchos visitantes dejando comentarios continuamente, ya que no podrán ver los últimos comentarios que han dejado otras visitas.
 
-Es preferible que los usuarios no vean los comentarios más recientes durante un tiempo antes que sobrecargar el servidor borrando y regenerando el cache una y otra vez, ya que esto es un problema importante para el WPO.  La principal desventaja de configurar el cache para que se vacíe con cada comentario es que puede inutilizar por completo el sistema de comentarios y hacer que no sirva para nada, sobre todo cuanto más tráfico tengamos 
+Es preferible **que los usuarios no vean los comentarios más recientes durante un tiempo antes que sobrecargar el servidor borrando y regenerando el cache** una y otra vez, ya que esto es un problema importante para el WPO.  La principal desventaja de configurar el cache para que se vacíe con cada comentario es que puede inutilizar por completo el sistema de comentarios y hacer que no sirva para nada, sobre todo cuanto más tráfico tengamos. 
    
-Para que los avatares carguen más rápido podemos implementar lazy load en los avatares, ya que los avatares al fin y al cabo son imágenes. Podemos implementar lazy load con librería Javascript o lazy load nativo, es recomendable activar los dos. Además de forma nativa, cada avatar que se carga desde Gravatar requiere una petición a un servidor externo y estas peticiones externas afectan negativamente al WPO porque no se pueden optimizar casi nunca. Si queremos hacer cache de avatares de Gravatar y que esas imágenes se guarden un tiempo en nuestro hosting para cargarse desde ahí, podemos hacerlo con plugins como LiteSpeed Cache o con el plugin FV Gravatar Cache.
+Para que **los avatares carguen más rápido** podemos implementar lazy load en los avatares, ya que los avatares al fin y al cabo son imágenes. Podemos **implementar lazy load con librería Javascript o lazy load nativo**, es recomendable activar los dos. Además de forma nativa, cada avatar que se carga desde Gravatar requiere una petición a un servidor externo y estas peticiones externas afectan negativamente al WPO porque no se pueden optimizar casi nunca. Si queremos hacer cache de avatares de Gravatar y que esas imágenes se guarden un tiempo en nuestro hosting para cargarse desde ahí, podemos hacerlo con plugins como LiteSpeed Cache o con el plugin FV Gravatar Cache.
 
-Lazy load de los comentarios: Podemos llevar un poco más allá la optimización de la carga de los comentarios en WordPress con lazy load y que los comentarios carguen cuando pulsamos un botón. Para cargar los comentarios con un botón podemos usar Lazy Load for Comments. Esta opción puede afectar negativamente al SEO, ya que Google puede utilizar los comentarios de tu blog para determinar ciertos factores relacionados con el contenido fresco y la relevancia.
+**Lazy load de los comentarios:** Podemos llevar un poco más allá la optimización de la carga de los comentarios en WordPress con lazy load y que los comentarios carguen cuando pulsamos un botón. Para cargar los comentarios con un botón podemos usar Lazy Load for Comments. Esta opción puede afectar negativamente al SEO, ya que Google puede utilizar los comentarios de tu blog para determinar ciertos factores relacionados con el contenido fresco y la relevancia.
 
-La otra opción es Paginar los Comentarios: Esto evitará que se carguen todos al mismo tiempo. WordPress, en su configuración, trae la opción de configuración necesaria para paginar los comentarios. Esta opción permititrá a GoogleBot seguir viendo los comentarios y la carga no se verá ralentizada aunque tengamos muchos.
+La otra opción es **Paginar los Comentarios**, esto evitará que se carguen todos al mismo tiempo. WordPress, en su configuración, trae la opción de configuración necesaria para paginar los comentarios. Esta opción permititrá a GoogleBot seguir viendo los comentarios y la carga no se verá ralentizada aunque tengamos muchos.
 
 ### 1.7 Optimizar CRON WordPress
 
@@ -182,7 +182,7 @@ Se consigue añadiendo una línea como la siguiente al archivo wp-config.php:
 define( 'WP_CRON_LOCK_TIMEOUT', 120 );
 
  ```
-Crear intervalos personalizados de ejecución de WP-Cron: Lo primero que debemos hacer es elegir un intervalo en el que WP-Cron repetirá la tarea. Por defecto, los intervalos de WordPress son hourly (cada hora), twicedaily (dos veces al día), daily (cada día) y weekly (semanalmente). Y aunque cubre un espectro bastante amplio, puede que necesitemos un intervalo personalizado, que podemos añadir con un código como el siguiente:
+- Crear intervalos personalizados de ejecución de WP-Cron: Lo primero que debemos hacer es elegir un intervalo en el que WP-Cron repetirá la tarea. Por defecto, los intervalos de WordPress son hourly (cada hora), twicedaily (dos veces al día), daily (cada día) y weekly (semanalmente). Y aunque cubre un espectro bastante amplio, puede que necesitemos un intervalo personalizado, que podemos añadir con un código como el siguiente:
 
 ```
 /* Nuevo intervalo personalizado de wp-cron */
