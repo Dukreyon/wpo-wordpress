@@ -238,4 +238,36 @@ return;
 }
 
 ```
+## 2 Optimizar Scripts Frontend (FSO)
+
+### 2.1 Minificar CSS y Javascript en WordPress
+
+Con plugins como Autoptimize o algunas partes de plugins de cache como WP Rocket, Swift Performance o W3 Total Cache que sirven para minificar el código CSS o JS automáticamente.
+
+### 2.2 Combinar CSS y Javascript en WordPress 
+
+Unir varios archivos del mismo tipo (o Javascript o CSS) en un único archivo, con el fin de simplificar la carga y reducir el número de peticiones HTTP realizadas. Se utilizan los mismos plugins que para minificar.
+
+Cuando se utiliza el “nuevo” protocolo HTTP/2 ya no se nota la técnica de combinar varios archivos en uno del mismo tipo, por lo que no es necesario utilizarla.
+
+La razón de que no sea necesario combinar JS y CSS con HTTP/2 es que esta nueva versión del protocolo HTTP/2 permite enviar varios “archivos” en una misma conexión TCP, es decir, no necesita abrir una conexión TCP para enviar cada archivo. De este modo, el envío de datos al navegador visitante es muchísimo más efectivo. Esto se nota sobre todo en archivos base texto como los JS y CSS, que además pueden ser comprimidos por la compresión GZIP en el servidor web antes de ser enviados.
+
+### 2.3 Carga asíncrona de Javascript y CSS en WordPress
+
+Podemos implementar la carga asíncrona en WordPress con distintos plugins. Uno de ellos es WP Rocket, el cual es bastante efectivo. Por otro lado, existe un plugin que lleva bastante tiempo sin actualizarse pero que es tan simple que sigue funcionando: se llama Async Javascript y es completamente gratuito. 
+
+- async: Los scripts cargan de forma asíncrona independientemente de la carga de la web. 
+
+- defer: Los scripts se ejecutan una vez que finaliza la carga. Se puede seguir parseando mientras se descargan los archivos javascript.
+
+### 2.4 Optimizar la entrega de CSS
+
+Optimizar la entrega de CSS es como configurar la carga asíncrona de CSS y, en algunos casos, retrasar la carga de las hojas de estilo CSS. Para implementar esta optimización de CSS en Wordpress podemos utilizar los plugins WP Rocket y Speed Up – Optimize CSS Delivery.
+
+### 2.5 Carga condicional de Javascript y CSS en WordPress
+
+Con la carga condicional o carga inteligente de JavaScript y CSS podemos elegir cuándo se cargan los scripts y las hojas de estilo en función de si necesitamos estos elementos o no. Obtendremos mejoras importantes en el crawl budge. Para realizar la carga condicional en Wordpress podemos utilizar estos dos plugins: Scripts Dequeuer y PerfMatters.
+
+
+
 
