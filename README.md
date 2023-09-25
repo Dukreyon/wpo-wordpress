@@ -268,6 +268,16 @@ Optimizar la entrega de CSS es como configurar la carga asíncrona de CSS y, en 
 
 Con la carga condicional o carga inteligente de JavaScript y CSS podemos elegir cuándo se cargan los scripts y las hojas de estilo en función de si necesitamos estos elementos o no. Obtendremos mejoras importantes en el crawl budge. Para realizar la carga condicional en Wordpress podemos utilizar estos dos plugins: Scripts Dequeuer y PerfMatters.
 
+### 2.6 Cómo optimizar fuentes
+
+Unifica las peticiones, en el caso de que uses fuentes de Google Fonts, seguramente tu web haga varias peticiones, una por cada fuente o variante. Lo más recomendable es alojar Google Fonts localmente en WordPress, hay varios plugins que te permiten realizarlo como WPRocket o PerfMatters.
+
+### 2.7 Optimizar Scripts externos
+
+- **Google Maps** es una excelente herramienta para mostrar la ubicación exacta de tu empresa. Sin embargo, es pesada, por lo que tu web terminará cargando de forma muy lenta. Una buena alternativa para Google Maps, es utilizar un mapa estático. De igual forma, te permitirá mostrar la localización de tu negocio a tus usuarios, sin necesitar tanto peso ni retrasar la carga de la web.
+
+- **Google Analytics** al cargar su código de seguimiento en el pie de página, puede eliminar el bloqueo de renderizado Javascript y CSS en el contenido por encima de la página. Para optimizar la carga de Google Analytics podemos utilizar uno de estos plugins: CAOS (Complete Analytics Optimization Suite) o Perfmatters.
+
 
 
 
