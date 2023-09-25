@@ -278,6 +278,42 @@ Unifica las peticiones, en el caso de que uses fuentes de Google Fonts, segurame
 
 - **Google Analytics** al cargar su código de seguimiento en el pie de página, puede eliminar el bloqueo de renderizado Javascript y CSS en el contenido por encima de la página. Para optimizar la carga de Google Analytics podemos utilizar uno de estos plugins: CAOS (Complete Analytics Optimization Suite) o Perfmatters.
 
+## 3 Optimizar Imágenes y Videos
+
+### 3.1 Optimizar Imágenes
+
+- Optimizar imágenes forma manual antes de subirlas a WordPress
+
+Antes de subir cualquier imagen a WordPress la optimices con tu editor preferido. Redimensiona tu imagen al máximo que se vaya a mostrar, sabiendo el tamaño máximo que necesitas subir a tu web, ya puedes redimensionar la imagen utilizando algún servicio como el editor de fotos Adobe Spark gratuito, Photoshop, GIMP, Pixelmator, Canva o Youzign. 
+
+Después expórtala para web en uno de estos formatos:
+JPG las imágenes coloridas y con muchos detalles 
+PNG para logos e imágenes con pocos colores o transparencias
+WebP capacidad de compresión sin pérdida de calidad, puede reducir el tamaño de las imágenes JPEG en un 25-34% y las PNG en un 26%
+
+El peso de los archivos de imágenes recomendados para la web es de 100kb, esta es la norma general pero siempre puede haber excepciones.
+
+- Cómo comprimir imágenes subidas en WordPress
+  
+  Existen algunos plugins para optimizar imágenes en WordPress que te permiten optimizar las fotos ya subidas, sin necesidad de tener que descargarlas y pasarlas de nuevo por el editor de imágenes. Algunos plugins de optimización de imágenes son:
+  - EWWW Image Optimizer
+  - WP Smush
+  - Optimole
+  - Imagify
+  - Converter for Media
+    
+### 3.2 Optimizar Videos
+
+- Usar formato MP4, el formato más ligero y ofrece una calidad excelente.
+  
+- Alojar vídeos localmente: Para cargar un solo bloque de vídeo de YouTube tu web tiene que cargar 11 archivos diferentes. Si está añadiendo un vídeo de YouTube en la parte de contenido de su sitio, la forma más fácil y rápida de optimizarlo es utilizar la función de vista previa de miniaturas de YouTube en Perfmatters. Lo que esto hace es cambiar los iframes de YouTube por una vista previa en miniatura y un icono de reproducción SVG ligero. No se carga nada de YouTube hasta que el usuario hace clic en él, incluidos scripts y fuentes de terceros.
+
+- Evitar la reproducción automática:es algo que debes evitar por completo, ya que genera más solicitudes y carga adicional en nuestra web.
+
+- Evitar utilizar vídeos de fondo, porque no se les puede aplicar Lazy Load y siempre tienen una mayor resolución. Si además lo usas en el ATF (Above the fold) Google te penalizará en los Core Web Vitals.
+
+
+
 
 
 
