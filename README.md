@@ -287,9 +287,9 @@ Unifica las peticiones, en el caso de que uses fuentes de Google Fonts, segurame
 Antes de subir cualquier imagen a WordPress la optimices con tu editor preferido. Redimensiona tu imagen al máximo que se vaya a mostrar, sabiendo el tamaño máximo que necesitas subir a tu web, ya puedes redimensionar la imagen utilizando algún servicio como el editor de fotos Adobe Spark gratuito, Photoshop, GIMP, Pixelmator, Canva o Youzign. 
 
 Después expórtala para web en uno de estos formatos:
-JPG las imágenes coloridas y con muchos detalles 
-PNG para logos e imágenes con pocos colores o transparencias
-WebP capacidad de compresión sin pérdida de calidad, puede reducir el tamaño de las imágenes JPEG en un 25-34% y las PNG en un 26%
+- JPG las imágenes coloridas y con muchos detalles 
+- PNG para logos e imágenes con pocos colores o transparencias
+- WebP capacidad de compresión sin pérdida de calidad, puede reducir el tamaño de las imágenes JPEG en un 25-34% y las PNG en un 26%
 
 El peso de los archivos de imágenes recomendados para la web es de 100kb, esta es la norma general pero siempre puede haber excepciones.
 
